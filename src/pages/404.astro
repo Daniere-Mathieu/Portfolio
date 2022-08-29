@@ -1,0 +1,89 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer/index.jsx";
+import Nav from "../components/Nav/index.jsx";
+---
+
+<html lang="fr">
+  <head>
+    <MainHead title="Not Found" />
+    <style lang="scss">
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .err404 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        flex-direction: column;
+      }
+      .flyingCubesContainer {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .flyingCubes {
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(
+            134deg,
+            rgb(106, 152, 240) 0%,
+            rgb(73, 97, 220) 99%
+          )
+          0% 0% repeat scroll;
+        z-index: -1;
+        &.c1 {
+          transform: translateY(0px) rotate(0deg);
+          animation: falling 3s linear infinite normal none;
+        }
+        &.c2 {
+          transform: translateY(200px) rotate(0deg);
+          animation: falling 2.5s linear infinite normal none;
+        }
+        &.c3 {
+          transform: translateY(100px) rotate(0deg);
+          animation: falling 2s linear infinite normal none;
+        }
+        &.c4 {
+          transform: translateY(300px) rotate(0deg);
+          animation: falling 2.7s linear infinite normal none;
+        }
+      }
+      @keyframes falling {
+        from {
+          transform: translateY(0px) rotate(0deg);
+        }
+        to {
+          transform: translateY(95vh) rotate(90deg);
+        }
+      }
+      .link {
+        &::before {
+          content: "👉";
+        }
+        &::after {
+          content: "👈";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flyingCubesContainer">
+      <div class="flyingCubes c1"></div>
+      <div class="flyingCubes c2"></div>
+      <div class="flyingCubes c3"></div>
+      <div class="flyingCubes c4"></div>
+    </div>
+    <div class="err404">
+      <h1>Tu es perdu?</h1>
+      <a href="/" class="link">je pense que ton chemin est ici</a>
+    </div>
+  </body>
+</html>

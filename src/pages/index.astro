@@ -1,0 +1,297 @@
+---
+// Component Imports
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav/index.jsx";
+import Footer from "../components/Footer/index.jsx";
+import { tech, language, project, other } from "../const";
+
+// Data Fetching: List all Markdown posts in the repo.
+const projects = await Astro.glob("./project/**/*.md");
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="fr">
+  <head>
+    <MainHead />
+    <style lang="scss">
+      .flyingCube {
+        position: sticky;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(
+            134deg,
+            rgb(106, 152, 240) 0%,
+            rgb(73, 97, 220) 99%
+          )
+          0% 0% repeat scroll;
+        transform: rotate(45deg);
+        top: 0px;
+        z-index: -1;
+        &.right {
+          transform: rotate(75deg);
+          right: 150px;
+          top: 150px;
+        }
+        &.middle {
+          transform: rotate(120deg);
+          right: 50%;
+          top: 41%;
+        }
+      }
+      .relative {
+        position: relative;
+      }
+      .header {
+        min-height: 70vh;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        &__wrapper {
+          animation: 0.4s ease 0s 1 normal none running bqBqVs;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+        }
+        &__title {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+        &__subtitle {
+          font-size: 2rem;
+          color: rgb(178, 189, 205);
+          overflow-wrap: break-word;
+        }
+        &__socialWrapper {
+          margin-top: 25px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 25px;
+          font-size: 1.5rem;
+        }
+        &__social,
+        &__social > * {
+          width: 30px;
+          height: 30px;
+          fill: rgb(85, 117, 231);
+          cursor: pointer;
+          &:hover {
+            fill: white;
+          }
+        }
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        &-area {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          max-width: 800px;
+          width: 100%;
+          min-height: 70vh;
+          margin: auto;
+          padding: 4rem 0px;
+        }
+        &__bar {
+          width: 12rem;
+          height: 5px;
+          background: linear-gradient(
+              134deg,
+              rgb(106, 152, 240) 0%,
+              rgb(73, 97, 220) 99%
+            )
+            0% 0% repeat scroll;
+          margin-bottom: 15px;
+        }
+        &__experienceContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        &__experienceWrapper {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+        }
+        &__experience {
+          display: flex;
+          justify-content: space-evenly;
+          &Image {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      .secondary {
+        background-color: var(--secondary);
+      }
+      .absolute {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .infinitecolor {
+        font-size: 1.5rem;
+        background: linear-gradient(
+          90deg,
+          rgba(245, 12, 12, 1) 0%,
+          rgba(121, 9, 60, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        background-clip: text;
+        animation: animate 2s linear infinite;
+      }
+      @keyframes animate {
+        to {
+          background-position: 200% center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <div class="absolute">
+      <div class="flyingCube"></div>
+      <div class="flyingCube middle"></div>
+      <div class="flyingCube right"></div>
+    </div>
+    <header class="header">
+      <div class="header__wrapper">
+        <h1 class="header__title">Salut, c'est Mathieu Daniere</h1>
+        <h2 class="header__subtitle">Developpeur fullstack</h2>
+        <div class="header__socialWrapper">
+          <a
+            class="header__social"
+            href="https://github.com/Daniere-Mathieu"
+            target="_blank"
+          >
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z"
+              ></path>
+            </svg>
+          </a>
+          <a class="header__social" href="mailto:contact@mathieudaniere.fr">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 490 490"
+              style="enable-background:new 0 0 490 490;"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M295.2,257.8L251.4,295c-3.5,2.9-8.6,2.9-12,0l-43.8-37.1L16.7,409.1h456.6L295.2,257.8z"
+                    ></path>
+                    <polygon points="0,92.2 0,397.8 180.1,245 			"></polygon>
+                    <polygon points="16.7,80.9 245,274.6 473.3,80.9 			"></polygon>
+                    <polygon points="309.9,245 490,397.8 490,92.2 			"></polygon>
+                  </g>
+                </g>
+              </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+              <g> </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="secondary">
+        <div class="main-area secondary" id="about">
+          <div class="main__bar"></div>
+          <h2>A propos</h2>
+          <p>
+            Bonjour je m'apelle <span class="infinitecolor"
+              >Mathieu Daniere</span
+            > j'ai 20 ans ,Je suis actuellement en formation de Developpeur Fullstack.
+          </p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="main-area" id="experience">
+        <div class="main__bar"></div>
+        <h2>Experiences</h2>
+        <div class="main__experienceContainer">
+          <ul class="main__experienceWrapper">
+            {
+              tech.map((item) => (
+                <li class="main__experience">
+                  <div>
+                    <img class="main__experienceImage" src={item.path} alt="" />
+                  </div>
+                  <div>
+                    <h4>{item.name}</h4>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+          <ul class="main__experienceWrapper">
+            <!-- ! loop here -->
+          </ul>
+          <ul class="main__experienceWrapper">
+            <!-- ! loop here -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="secondary">
+        <div class="main-area secondary" id="projects">
+          <div class="main__bar"></div>
+          <h2>Projets</h2>
+          <div class="main__projectContainer">
+            <!-- ! loop on projectWrapper take on const.ts -->
+            <div class="main__projectWrapper">
+              <div>
+                <h3></h3>
+                <p></p>
+              </div>
+              <div>
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

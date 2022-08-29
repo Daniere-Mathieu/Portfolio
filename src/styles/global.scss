@@ -1,0 +1,60 @@
+// Tokens
+:root {
+  --principal: rgb(11, 14, 17);
+  --secondary: rgb(21, 26, 33);
+  --font-color: rgb(255, 255, 255);
+  --font-color-hover: rgb(85, 117, 231);
+}
+
+// Base
+
+body {
+  margin: 0;
+  color: var(--font-color);
+  scroll-behavior: smooth;
+  padding: 0px;
+  margin: 0px;
+  font-family: Montserrat, sans-serif;
+  background: var(--principal);
+  position: relative;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--font-color);
+  &:focus,
+  &:hover {
+    color: var(--font-color-hover);
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  padding: 0px;
+  margin: 0px;
+}
+p {
+  font-size: 1.3rem;
+}
+// Utils
+::-webkit-scrollbar {
+  width: 15px;
+  &-track {
+    background: var(--secondary);
+  }
+  &-thumb {
+    background-color: var(--font-color-hover);
+    &:hover {
+      background-color: var(--font-color);
+    }
+  }
+}
