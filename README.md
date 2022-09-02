@@ -1,15 +1,14 @@
-# Astro Starter Kit: Portfolio
+# Hello , this project is a small portfolio !
 
-```
-npm init astro -- --template portfolio
-```
+For this project i use astro to test the framework.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
+I only made to page on this project the index page to display my skill and one 404 page to redirect people and make a little animation
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+I take the design inspiration and color scheme for the project of [portfolio](https://robiot.dev/) made by Robiot
 
-![portfolio](https://user-images.githubusercontent.com/4677417/186189473-03dda103-65d3-4220-8b60-180ccaee5939.png)
+If you like my portfolio you can star it ! (thanks if you do it 😍)
 
+If you want to modify my portfolio to make your own you can find the Commands below this !
 
 ## 🧞 Commands
 
@@ -23,7 +22,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying     |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

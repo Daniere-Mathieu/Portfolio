@@ -3,10 +3,9 @@
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/index.jsx";
 import Footer from "../components/Footer/index.jsx";
-import { tech, language, project, other } from "../const";
+import { tech, projects } from "../const";
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob("./project/**/*.md");
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -113,20 +112,53 @@ const projects = await Astro.glob("./project/**/*.md");
         }
         &__experienceContainer {
           display: flex;
-          justify-content: space-between;
           width: 100%;
+          margin-top: 50px;
         }
         &__experienceWrapper {
-          display: flex;
-          flex-direction: column;
-          row-gap: 10px;
+          display: grid;
+          width: 100%;
+          grid-gap: 20px;
+          grid-template-columns: repeat(3, 1fr);
         }
         &__experience {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: flex-start;
+          background-color: var(--secondary);
+          padding: 10px;
+          border-radius: 10px;
+          align-items: center;
+          gap: 10px;
+          z-index: 1;
+          &:hover,
+          &:focus {
+            transform: rotate(3deg);
+          }
+
           &Image {
             width: 25px;
             height: 25px;
+          }
+          &Separator {
+            height: 100%;
+            width: 10%;
+          }
+        }
+        &__project {
+          &Container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 15px;
+          }
+          &Wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
           }
         }
       }
@@ -139,6 +171,7 @@ const projects = await Astro.glob("./project/**/*.md");
         height: 100%;
         display: flex;
         justify-content: space-around;
+        z-index: -1;
       }
       .infinitecolor {
         font-size: 1.5rem;
@@ -255,7 +288,11 @@ const projects = await Astro.glob("./project/**/*.md");
               tech.map((item) => (
                 <li class="main__experience">
                   <div>
-                    <img class="main__experienceImage" src={item.path} alt="" />
+                    <img
+                      class="main__experienceImage"
+                      src={item.path}
+                      alt={item.name}
+                    />
                   </div>
                   <div>
                     <h4>{item.name}</h4>
@@ -263,12 +300,6 @@ const projects = await Astro.glob("./project/**/*.md");
                 </li>
               ))
             }
-          </ul>
-          <ul class="main__experienceWrapper">
-            <!-- ! loop here -->
-          </ul>
-          <ul class="main__experienceWrapper">
-            <!-- ! loop here -->
           </ul>
         </div>
       </div>
@@ -278,16 +309,22 @@ const projects = await Astro.glob("./project/**/*.md");
           <div class="main__bar"></div>
           <h2>Projets</h2>
           <div class="main__projectContainer">
-            <!-- ! loop on projectWrapper take on const.ts -->
-            <div class="main__projectWrapper">
-              <div>
-                <h3></h3>
-                <p></p>
-              </div>
-              <div>
-                <img src="" alt="" />
-              </div>
-            </div>
+            {
+              projects.map((project) => (
+                <div class="main__projectWrapper">
+                  <div class="main__projectDataContainer">
+                    <h3>{project.name}</h3>
+                    <p>{project.description ? project.description : ""}</p>
+                  </div>
+                  <div class="main__projectImageWrapper">
+                    <img
+                      src={project.path}
+                      alt={project.alt ? project.alt : ""}
+                    />
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
