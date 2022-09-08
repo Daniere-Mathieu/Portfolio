@@ -1,0 +1,31 @@
+.header {
+  min-height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 2rem;
+    color: rgb(178, 189, 205);
+    overflow-wrap: break-word;
+  }
+  &__socialWrapper {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 1.5rem;
+  }
+}

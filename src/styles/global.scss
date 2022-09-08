@@ -63,3 +63,30 @@ p {
     }
   }
 }
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.secondary {
+  background-color: var(--secondary);
+}
+.absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.fullSize {
+  width: 100%;
+}

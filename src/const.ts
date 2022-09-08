@@ -3,6 +3,8 @@ interface list {
   path: string;
   alt?: string;
   description?: string;
+  link?: string;
+  githubLink?: string;
 }
 export const tech: list[] = [
   { name: "Javascript", path: "/assets/svg/js.svg" },
@@ -15,6 +17,20 @@ export const tech: list[] = [
   { name: "git", path: "/assets/svg/git.svg" },
 ];
 export const projects: list[] = [
-  { name: "Ereko", path: "" },
-  { name: "Pronto", path: "" },
+  {
+    name: "Ereko",
+    path: "/assets/svg/ereko_logo.svg",
+    description:
+      "Le projet Ereko est un lecteur de musique qui recupere les musiques depuis youtube , les enregistre coter serveur et les redistribue au playlist qui ont besoin de cette musique",
+    githubLink: "https://github.com/Daniere-Mathieu/ereko",
+    link: "http://devCarotte.fr",
+  },
+
+  {
+    name: "Pronto",
+    path: "/assets/pronto.png",
+    link: "https://www.lepronto.fr",
+    description:
+      "Le projet pronto est un projet que je réalise durant mon alternance, il s'agit d'un ERP pour les restaurateur qui leur permet de gerer leurs caisse ainsi que leurs ressources humaines.",
+  },
 ];

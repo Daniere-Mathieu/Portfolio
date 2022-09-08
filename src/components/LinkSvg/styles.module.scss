@@ -1,0 +1,10 @@
+.social,
+.social > * {
+  width: 30px;
+  height: 30px;
+  fill: rgb(85, 117, 231);
+  cursor: pointer;
+  &:hover {
+    fill: white;
+  }
+}
