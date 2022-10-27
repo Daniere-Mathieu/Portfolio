@@ -90,3 +90,9 @@ p {
 .fullSize {
   width: 100%;
 }
+summary {
+  color: blue;
+}
+details[open] > summary {
+  color: red;
+}

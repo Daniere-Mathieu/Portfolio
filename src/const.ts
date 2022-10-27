@@ -23,7 +23,8 @@ export const projects: list[] = [
     description:
       "Le projet Ereko est un lecteur de musique qui recupere les musiques depuis youtube , les enregistre coter serveur et les redistribue au playlist qui ont besoin de cette musique",
     githubLink: "https://github.com/Daniere-Mathieu/ereko",
-    link: "http://devCarotte.fr",
+    link: "http://ereko.devcarotte.fr",
+    alt: "logo de Ereko",
   },
 
   {
@@ -32,5 +33,6 @@ export const projects: list[] = [
     link: "https://www.lepronto.fr",
     description:
       "Le projet pronto est un projet que je réalise durant mon alternance, il s'agit d'un ERP pour les restaurateur qui leur permet de gerer leurs caisse ainsi que leurs ressources humaines.",
+    alt: "logo de pronto",
   },
 ];
