@@ -1,11 +1,13 @@
-FROM node:lts-alpine as build
+FROM node:lts-alpine
 LABEL dev="Mathieu Daniere"
 WORKDIR /home/app
-COPY package*.json .
+COPY ./package*.json ./
 COPY . .
 RUN npm install
-
-
-FROM node:lts-alpine as prod
-WORKDIR /home/app
+EXPOSE 3000
 CMD ["npm","run","dev"]
+
+#FROM node:lts-alpine as prod
+#WORKDIR /home/app
+#RUN ls
+#CMD ["npm","run","dev"]

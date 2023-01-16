@@ -1,4 +1,4 @@
-import Styles from "./styles.module.scss";
+import Styles from "./Styles.module.scss";
 import { GithubSvg, MailSvg } from "../LinkSvg/index.jsx";
 
 export function Header() {

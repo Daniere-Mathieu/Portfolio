@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  ntfy:
+    build: .
+    container_name: portfolio
+    command:
+      - serve
+    ports:
+      - 4310:3000
+    restart: unless-stopped
+    labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.portfolio.rule=Host(`portfolio.devriri.fr`)"
+        - "treafik.http.routers.portfolio.entrypoints=websecure"
+    networks:
+        - web
+
+networks:
+  web:
+    external: true

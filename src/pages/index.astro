@@ -102,9 +102,10 @@ import { tech, projects } from "../const";
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            /* flex-direction: column; */
             width: 100%;
-            row-gap: 15px;
+            gap: 15px;
+            flex-wrap: wrap;
           }
           &Title {
             font-size: 3rem;
@@ -213,6 +214,7 @@ import { tech, projects } from "../const";
         </div>
       </div>
 
+          <!-- make card in line for project -->
       <div class="secondary">
         <div class="main-area secondary" id="projects">
           <div class="main__bar"></div>
@@ -221,16 +223,16 @@ import { tech, projects } from "../const";
             {
               projects.map((project) => (
                 <li class="main__projectWrapper">
-                  <div class="flex center fullSize">
-                    <div class="main__projectDataContainer">
-                      <h3 class="main__projectTitle">{project.name}</h3>
-                    </div>
+                  <div class="flex  fullSize column">
                     <div class="main__projectImageWrapper">
                       <img
                         class="main__projectImage"
                         src={project.path}
                         alt={project.alt ? project.alt : null}
                       />
+                    </div>
+                    <div class="main__projectDataContainer">
+                      <h3 class="main__projectTitle">{project.name}</h3>
                     </div>
                   </div>
                   <details class="main__projectDetails">

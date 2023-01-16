@@ -10,7 +10,6 @@ function Footer() {
           Robiot
         </a>
       </small>
-      <small className={Styles.byline}>🚀 Built with Astro</small>
     </footer>
   );
 }

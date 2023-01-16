@@ -90,6 +90,10 @@ p {
 .fullSize {
   width: 100%;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}
 summary {
   color: blue;
 }
