@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:16-alpine
 LABEL dev="Mathieu Daniere"
 WORKDIR /home/app
 COPY ./package*.json ./
