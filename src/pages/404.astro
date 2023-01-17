@@ -85,7 +85,7 @@ import MainHead from "../components/MainHead.astro";
     </div>
     <div class="err404">
       <h1>Tu es perdu?</h1>
-      <a href="/" class="link">je pense que ton chemin est ici</a>
+      <a href={import.meta.env.BASE_URL} class="link">je pense que ton chemin est ici</a>
     </div>
   </body>
 </html>
