@@ -5,7 +5,7 @@ function Nav() {
     <nav className={Styles.nav}>
       <div className={Styles.nav__wrapper}>
         <div className={Styles.nav__left}>
-          <a className={Styles.nav__logolink} href="/">
+          <a className={Styles.nav__logolink} href={import.meta.env.BASE_URL}>
             <div className={Styles.monogram}>MD</div>
           </a>
         </div>
