@@ -19,7 +19,7 @@ export const tech: list[] = [
 export const projects: list[] = [
   {
     name: "Ereko",
-    path: "/assets/svg/ereko_logo.svg",
+    path: `${import.meta.env.BASE_URL}/assets/svg/ereko_logo.svg`,
     description:
       "Le projet Ereko est un lecteur de musique qui recupere les musiques depuis youtube , les enregistre coter serveur et les redistribue au playlist qui ont besoin de cette musique",
     githubLink: "https://github.com/Daniere-Mathieu/ereko",
@@ -29,7 +29,7 @@ export const projects: list[] = [
 
   {
     name: "Pronto",
-    path: "/assets/pronto.png",
+    path: `${import.meta.env.BASE_URL}/assets/pronto.png`,
     link: "https://www.lepronto.fr",
     description:
       "Le projet pronto est un projet que je réalise durant mon alternance, il s'agit d'un ERP pour les restaurateur qui leur permet de gerer leurs caisse ainsi que leurs ressources humaines.",
