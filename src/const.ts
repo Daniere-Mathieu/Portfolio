@@ -7,14 +7,14 @@ interface list {
   githubLink?: string;
 }
 export const tech: list[] = [
-  { name: "Javascript", path: "/assets/svg/js.svg" },
-  { name: "Typescript", path: "/assets/svg/typescript.svg" },
-  { name: "PHP", path: "/assets/svg/php.svg" },
-  { name: "Vuejs", path: "/assets/svg/vuejs.svg" },
-  { name: "Quasar", path: "/assets/svg/quasar.svg" },
-  { name: "Nodejs", path: "/assets/svg/nodejs.svg" },
-  { name: "Archlinux", path: "/assets/svg/archlinux.svg" },
-  { name: "git", path: "/assets/svg/git.svg" },
+  { name: "Javascript", path: `${import.meta.env.BASE_URL}/assets/svg/js.svg` },
+  { name: "Typescript", path: `${import.meta.env.BASE_URL}/assets/svg/typescript.svg` },
+  { name: "PHP", path: `${import.meta.env.BASE_URL}/assets/svg/php.svg` },
+  { name: "Vuejs", path: `${import.meta.env.BASE_URL}/assets/svg/vuejs.svg` },
+  { name: "Quasar", path: `${import.meta.env.BASE_URL}/assets/svg/quasar.svg` },
+  { name: "Nodejs", path: `${import.meta.env.BASE_URL}/assets/svg/nodejs.svg` },
+  { name: "Archlinux", path: `${import.meta.env.BASE_URL}/assets/svg/archlinux.svg` },
+  { name: "git", path: `${import.meta.env.BASE_URL}/assets/svg/git.svg` },
 ];
 export const projects: list[] = [
   {
