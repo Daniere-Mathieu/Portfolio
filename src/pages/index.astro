@@ -3,7 +3,11 @@
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/index.jsx";
 import Footer from "../components/Footer/index.jsx";
-import { GithubSvg, MailSvg } from "../components/LinkSvg/index.jsx";
+import {
+  GithubSvg,
+  MailSvg,
+  WebsiteSvg,
+} from "../components/LinkSvg/index.jsx";
 import { Header } from "../components/Header/index.jsx";
 import { tech, projects } from "../const";
 ---
@@ -117,14 +121,16 @@ import { tech, projects } from "../const";
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            flex-direction: column;
             width: 90%;
             box-shadow: -1px 5px 5px black;
             border-radius: 10px;
             padding: 10px;
+            gap: 5px;
           }
           &DataContainer {
-            width: 50%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
           }
           &RessourceContainer {
             display: flex;
@@ -136,8 +142,9 @@ import { tech, projects } from "../const";
         font-size: 1.5rem;
         background: linear-gradient(
           90deg,
-          rgba(245, 12, 12, 1) 0%,
-          rgba(121, 9, 60, 1) 100%
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -214,7 +221,7 @@ import { tech, projects } from "../const";
         </div>
       </div>
 
-          <!-- make card in line for project -->
+      <!-- make card in line for project -->
       <div class="secondary">
         <div class="main-area secondary" id="projects">
           <div class="main__bar"></div>
@@ -231,18 +238,19 @@ import { tech, projects } from "../const";
                         alt={project.alt ? project.alt : null}
                       />
                     </div>
+                  </div>
+                  <div>
                     <div class="main__projectDataContainer">
                       <h3 class="main__projectTitle">{project.name}</h3>
+                      <div class="main__projectRessourceContainer">
+                        {project.link ? (
+                          <WebsiteSvg link={project.link} />
+                        ) : null}
+                        {project.githubLink ? <GithubSvg /> : null}
+                      </div>
                     </div>
-                  </div>
-                  <details class="main__projectDetails">
-                    <summary>Description</summary>
                     <p>{project.description ? project.description : null}</p>
-                    <div class="main__projectRessourceContainer">
-                      {project.link ? <MailSvg /> : null}
-                      {project.githubLink ? <GithubSvg /> : null}
-                    </div>
-                  </details>
+                  </div>
                 </li>
               ))
             }
