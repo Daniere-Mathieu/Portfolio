@@ -1,14 +1,14 @@
-# Hello , this project is a small portfolio !
+# Hello, this project is a small portfolio!
 
-For this project i use astro to test the framework.
+For this project, I used Astro to learn the framework.
 
-I only made to page on this project the index page to display my skill and one 404 page to redirect people and make a little animation
+I only made two pages for this project: the index page to display my skills and one 404 page to redirect people and include a little animation.
 
-I take the design inspiration and color scheme for the project of [portfolio](https://robiot.dev/) made by Robiot
+I took design inspiration and color scheme for the project of a portfolio made by Robiot.
 
-If you like my portfolio you can star it ! (thanks if you do it 😍)
+If you like my portfolio, you can star it! (Thanks if you do it 😍)
 
-If you want to modify my portfolio to make your own you can find the Commands below this !
+If you want to modify my portfolio to make your own, you can find the commands below!
 
 ## 🧞 Commands
 
