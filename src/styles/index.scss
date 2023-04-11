@@ -1,0 +1,162 @@
+.flyingCube {
+  position: sticky;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+      134deg,
+      rgb(106, 152, 240) 0%,
+      rgb(73, 97, 220) 99%
+    )
+    0% 0% repeat scroll;
+  transform: rotate(45deg);
+  top: 0px;
+  z-index: -1;
+  &.right {
+    transform: rotate(75deg);
+    right: 150px;
+    top: 150px;
+  }
+  &.middle {
+    transform: rotate(120deg);
+    right: 50%;
+    top: 41%;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    min-height: 70vh;
+    margin: auto;
+    padding: 4rem 0px;
+  }
+  &__bar {
+    width: 12rem;
+    height: 5px;
+    background: linear-gradient(
+        134deg,
+        rgb(106, 152, 240) 0%,
+        rgb(73, 97, 220) 99%
+      )
+      0% 0% repeat scroll;
+    margin-bottom: 15px;
+  }
+  &__experienceContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+  }
+  &__experienceWrapper {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__experience {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--secondary);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+    &:hover,
+    &:focus {
+      transform: rotate(3deg);
+    }
+
+    &Image {
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+    }
+    &Separator {
+      height: 100%;
+      width: 10%;
+    }
+  }
+  &__project {
+    &Container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-direction: column; */
+      width: 100%;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    &Title {
+      font-size: 3rem;
+    }
+    &Image {
+      height: 100%;
+      max-height: 200px;
+    }
+    &Wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      box-shadow: -1px 5px 5px black;
+      border-radius: 10px;
+      padding: 10px;
+      gap: 15px;
+    }
+    &DataContainer {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    &RessourceContainer {
+      display: flex;
+      gap: 25px;
+    }
+  }
+}
+.infinitecolor {
+  font-size: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  background-clip: text;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  to {
+    background-position: 200% center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .right {
+    display: none;
+  }
+  .main__projectWrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .middle {
+    display: none;
+  }
+  .main__experienceWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main__projectWrapper {
+    flex-direction: column;
+  }
+}

@@ -21,6 +21,20 @@ export const tech: list[] = [
     path: `${import.meta.env.BASE_URL}/assets/svg/archlinux.svg`,
   },
   { name: "git", path: `${import.meta.env.BASE_URL}/assets/svg/git.svg` },
+  { name: "Docker", path: `${import.meta.env.BASE_URL}/assets/svg/docker.svg` },
+  { name: "Nginx", path: `${import.meta.env.BASE_URL}/assets/svg/nginx.svg` },
+  {
+    name: "MariaDB",
+    path: `${import.meta.env.BASE_URL}/assets/svg/mariadb.svg`,
+  },
+  {
+    name: "MongoDB",
+    path: `${import.meta.env.BASE_URL}/assets/svg/mongodb.svg`,
+  },
+  {
+    name: "Travail d'équipe",
+    path: `${import.meta.env.BASE_URL}/assets/svg/teamwork.svg`,
+  },
   // ! TODO add soft skill
 ];
 export const projects: list[] = [
