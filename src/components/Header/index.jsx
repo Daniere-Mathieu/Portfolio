@@ -8,7 +8,7 @@ export function Header() {
         <h1 className={Styles.header__title}>Mathieu Daniere</h1>
         <h2 className={Styles.header__subtitle}>Developpeur fullstack</h2>
         <div className={Styles.header__socialWrapper}>
-          <GithubSvg />
+          <GithubSvg href="https://github.com/Daniere-Mathieu" />
           <MailSvg />
         </div>
       </div>
