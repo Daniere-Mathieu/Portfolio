@@ -17,7 +17,7 @@ function Nav() {
             Experience
           </a>
           <a className={Styles.nav__link} href="#projects">
-            Projet
+            Projets
           </a>
         </div>
       </div>

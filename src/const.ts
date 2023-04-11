@@ -21,6 +21,7 @@ export const tech: list[] = [
     path: `${import.meta.env.BASE_URL}/assets/svg/archlinux.svg`,
   },
   { name: "git", path: `${import.meta.env.BASE_URL}/assets/svg/git.svg` },
+  // ! TODO add soft skill
 ];
 export const projects: list[] = [
   {
@@ -32,7 +33,6 @@ export const projects: list[] = [
     // link: "http://ereko.devcarotte.fr",
     alt: "logo de Ereko",
   },
-
   {
     name: "Pronto",
     path: `${import.meta.env.BASE_URL}/assets/pronto.png`,
