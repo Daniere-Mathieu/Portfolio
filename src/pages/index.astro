@@ -92,9 +92,11 @@ import { tech, projects } from "../const";
                       <h3 class="main__projectTitle">{project.name}</h3>
                       <div class="main__projectRessourceContainer">
                         {project.link ? (
-                          <WebsiteSvg link={project.link} />
+                          <WebsiteSvg href={project.link} />
                         ) : null}
-                        {project.githubLink ? <GithubSvg /> : null}
+                        {project.githubLink ? (
+                          <GithubSvg href={project.githubLink} />
+                        ) : null}
                       </div>
                     </div>
                     <p>{project.description ? project.description : null}</p>
