@@ -3,6 +3,7 @@ import "../styles/global.scss";
 const {
   title = "Mathieu Daniere: Portfolio",
   description = "Portfolio de Mathieu Daniere",
+  ogImage = `${import.meta.env.BASE_URL}/assets/og-image.png`,
 } = Astro.props;
 ---
 
@@ -16,7 +17,7 @@ const {
 <meta name="og:url" content={Astro.request.url} />
 <meta name="og:site_name" content={title} />
 <meta name="og:locale" content="fr_FR" />
-<meta name="og:image" content="/assets/og-image.png" />
+<meta name="og:image" content={ogImage} />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
