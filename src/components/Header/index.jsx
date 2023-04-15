@@ -1,5 +1,10 @@
 import Styles from "./Styles.module.scss";
-import { GithubSvg, MailSvg } from "../LinkSvg/index.jsx";
+import {
+  GithubSvg,
+  MailSvg,
+  LinkedinSvg,
+  PhoneSvg,
+} from "../LinkSvg/index.jsx";
 
 export function Header() {
   return (
@@ -10,6 +15,8 @@ export function Header() {
         <div className={Styles.header__socialWrapper}>
           <GithubSvg href="https://github.com/Daniere-Mathieu" />
           <MailSvg />
+          <LinkedinSvg />
+          <PhoneSvg />
         </div>
       </div>
     </header>

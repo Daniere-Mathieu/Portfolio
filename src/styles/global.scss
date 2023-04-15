@@ -1,12 +1,9 @@
-// Tokens
 :root {
   --principal: rgb(11, 14, 17);
   --secondary: rgb(21, 26, 33);
   --font-color: rgb(255, 255, 255);
   --font-color-hover: rgb(85, 117, 231);
 }
-
-// Base
 
 body {
   margin: 0;
@@ -51,7 +48,6 @@ li {
 p {
   font-size: 1.3rem;
 }
-// Utils
 ::-webkit-scrollbar {
   width: 15px;
   &-track {

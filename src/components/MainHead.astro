@@ -10,6 +10,17 @@ const {
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
+<meta name="og:title" content={title} />
+<meta name="og:description" content={description} />
+<meta name="og:type" content="website" />
+<meta name="og:url" content={Astro.request.url} />
+<meta name="og:site_name" content={title} />
+<meta name="og:locale" content="fr_FR" />
+<meta name="og:image" content="/assets/og-image.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:url" content={Astro.request.url} />
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -87,9 +87,8 @@
     &Container {
       margin-top: 50px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      /* flex-direction: column; */
       width: 100%;
       gap: 15px;
       flex-wrap: wrap;
@@ -126,15 +125,15 @@
   font-size: 1.5rem;
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
+    rgb(25, 15, 206) 25%,
+    rgb(21, 21, 224) 35%,
     rgba(0, 212, 255, 1) 99%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   background-clip: text;
-  animation: animate 2s linear infinite;
+  animation: animate 5s linear infinite;
 }
 @keyframes animate {
   to {

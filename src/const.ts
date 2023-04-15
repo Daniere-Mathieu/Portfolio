@@ -35,7 +35,6 @@ export const tech: list[] = [
     name: "Travail d'équipe",
     path: `${import.meta.env.BASE_URL}/assets/svg/teamwork.svg`,
   },
-  // ! TODO add soft skill
 ];
 export const projects: list[] = [
   {
@@ -44,7 +43,6 @@ export const projects: list[] = [
     description:
       "Ereko était un projet de cours où nous avons utilisé l'API de recherche YouTube pour récupérer les musiques les plus populaires, que nous avons enregistrées sur un serveur avant de les redistribuer aux playlists ciblées. Ce projet a été une opportunité de développer mes compétences en développement web et en intégration de services tiers.",
     githubLink: "https://github.com/Daniere-Mathieu/ereko",
-    // link: "http://ereko.devcarotte.fr",
     alt: "logo de Ereko",
   },
   {
