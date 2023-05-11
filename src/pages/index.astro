@@ -70,11 +70,10 @@ import { Image } from "@astrojs/image/components";
               tech.map((item) => (
                 <li class="main__experience">
                   <div>
-                    <Image
+                    <img
                       class="main__experienceImage"
                       src={item.path}
                       alt={item.name}
-                      aspectRatio="1:1"
                       width={25}
                       height={25}
                     />
@@ -99,12 +98,12 @@ import { Image } from "@astrojs/image/components";
                 <li class="main__projectWrapper">
                   <div class="flex  fullSize column">
                     <div class="main__projectImageWrapper">
-                      <Image
+                      <img
                         class="main__projectImage"
                         src={project.path}
                         alt={project.alt ? project.alt : ""}
-                        aspectRatio="1:1"
                         width={200}
+                        height={200}
                       />
                     </div>
                   </div>
