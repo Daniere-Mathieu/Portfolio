@@ -47,6 +47,11 @@
   letter-spacing: -0.125rem;
   border: 3px solid currentColor;
   border-radius: 50%;
+  transition: all 0.5s linear;
+
+  &:hover {
+    transform: rotate(20deg);
+  }
 }
 
 .social {
