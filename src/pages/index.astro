@@ -1,5 +1,4 @@
 ---
-// Component Imports
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/index.jsx";
 import Footer from "../components/Footer/index.jsx";
@@ -10,7 +9,25 @@ import {
 } from "../components/LinkSvg/index.jsx";
 import { Header } from "../components/Header/index.jsx";
 import { tech, projects } from "../const";
+import { Image } from "@astrojs/image/components";
 ---
+
+<script>
+  const elements = document.querySelectorAll(".main__experience");
+
+  elements.forEach((element) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!element.classList.contains("animate"))
+            element.classList.add("animate");
+        }
+      });
+    });
+
+    observer.observe(element);
+  });
+</script>
 
 <html lang="fr">
   <head>
@@ -33,8 +50,8 @@ import { tech, projects } from "../const";
           <div class="main__bar"></div>
           <h2>A propos</h2>
           <p>
-            Bonjour, je suis <span class="infinitecolor">Mathieu Daniere</span>,
-            un développeur Fullstack de 20 ans actuellement en formation.<br />
+            Bonjour, je suis Mathieu Daniere, un développeur Fullstack de 20 ans
+            actuellement en formation.<br />
             Chez Le Pronto, j'ai contribué à la conception et au développement d'un
             ERP pour les restaurateurs, en tant qu'alternant développeur Fullstack.<br
             />
@@ -53,10 +70,13 @@ import { tech, projects } from "../const";
               tech.map((item) => (
                 <li class="main__experience">
                   <div>
-                    <img
+                    <Image
                       class="main__experienceImage"
                       src={item.path}
                       alt={item.name}
+                      aspectRatio="1:1"
+                      width={25}
+                      height={25}
                     />
                   </div>
                   <div>
@@ -79,10 +99,12 @@ import { tech, projects } from "../const";
                 <li class="main__projectWrapper">
                   <div class="flex  fullSize column">
                     <div class="main__projectImageWrapper">
-                      <img
+                      <Image
                         class="main__projectImage"
                         src={project.path}
-                        alt={project.alt ? project.alt : null}
+                        alt={project.alt ? project.alt : ""}
+                        aspectRatio="1:1"
+                        width={200}
                       />
                     </div>
                   </div>
