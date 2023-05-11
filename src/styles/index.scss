@@ -69,6 +69,7 @@
     align-items: center;
     gap: 10px;
     z-index: 1;
+    display: none;
     &:hover,
     &:focus {
       transform: rotate(3deg);
@@ -150,6 +151,7 @@
 
 .animate {
   animation: translate 2s ease-in-out;
+  display: flex;
 }
 
 @keyframes translate {
@@ -160,7 +162,7 @@
 
   to {
     transform: translateX(0%);
-    display: block;
+    display: flex;
   }
 }
 

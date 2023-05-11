@@ -13,20 +13,24 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <script>
-  const elements = document.querySelectorAll(".main__experience");
-
-  elements.forEach((element) => {
+  const element = document.getElementById("experienceWrapper");
+  if (!element) {
+    console.error("Element not found");
+  } else {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (!element.classList.contains("animate"))
-            element.classList.add("animate");
+          const elements = document.querySelectorAll(".main__experience");
+          elements.forEach((element) => {
+            if (!element.classList.contains("animate"))
+              element.classList.add("animate");
+          });
         }
       });
     });
 
     observer.observe(element);
-  });
+  }
 </script>
 
 <html lang="fr">
@@ -65,7 +69,7 @@ import { Image } from "@astrojs/image/components";
         <div class="main__bar"></div>
         <h2>Experiences</h2>
         <div class="main__experienceContainer">
-          <ul class="main__experienceWrapper">
+          <ul class="main__experienceWrapper" id="experienceWrapper">
             {
               tech.map((item) => (
                 <li class="main__experience">
