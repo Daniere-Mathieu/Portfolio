@@ -6,6 +6,7 @@ interface list {
   link?: string;
   githubLink?: string;
 }
+
 export const tech: list[] = [
   { name: "Javascript", path: `${import.meta.env.BASE_URL}/assets/svg/js.svg` },
   {
@@ -16,6 +17,7 @@ export const tech: list[] = [
   { name: "Vuejs", path: `${import.meta.env.BASE_URL}/assets/svg/vuejs.svg` },
   { name: "Quasar", path: `${import.meta.env.BASE_URL}/assets/svg/quasar.svg` },
   { name: "Nodejs", path: `${import.meta.env.BASE_URL}/assets/svg/nodejs.svg` },
+  { name: "Deno", path: `${import.meta.env.BASE_URL}/assets/svg/deno.svg` },
   {
     name: "Archlinux",
     path: `${import.meta.env.BASE_URL}/assets/svg/archlinux.svg`,
@@ -23,6 +25,7 @@ export const tech: list[] = [
   { name: "git", path: `${import.meta.env.BASE_URL}/assets/svg/git.svg` },
   { name: "Docker", path: `${import.meta.env.BASE_URL}/assets/svg/docker.svg` },
   { name: "Nginx", path: `${import.meta.env.BASE_URL}/assets/svg/nginx.svg` },
+  { name: "Apache", path: `${import.meta.env.BASE_URL}/assets/svg/apache.svg` },
   {
     name: "MariaDB",
     path: `${import.meta.env.BASE_URL}/assets/svg/mariadb.svg`,
@@ -35,7 +38,12 @@ export const tech: list[] = [
     name: "Travail d'équipe",
     path: `${import.meta.env.BASE_URL}/assets/svg/teamwork.svg`,
   },
+  {
+    name: "Communication",
+    path: `${import.meta.env.BASE_URL}/assets/svg/communication.svg`,
+  },
 ];
+
 export const projects: list[] = [
   {
     name: "Ereko",
