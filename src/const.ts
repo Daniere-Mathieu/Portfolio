@@ -56,9 +56,17 @@ export const projects: list[] = [
   {
     name: "Pronto",
     path: `${import.meta.env.BASE_URL}/assets/pronto.png`,
-    link: "https://www.lepronto.fr",
+    link: "https://www.lepronto.net",
     description:
       "Le projet Pronto est un ERP destiné aux restaurateurs, que j'ai développé en collaboration avec une équipe en tant que développeur en alternance. Ce projet m'a permis d'acquérir des compétences solides en développement d'applications métier et en travail d'équipe pour répondre aux besoins des clients. Je suis fier de contribuer à cette initiative qui apporte une réelle valeur ajoutée au secteur de la restauration.",
     alt: "logo de pronto",
+  },
+  {
+    name: "Side Project",
+    path: `${import.meta.env.BASE_URL}/assets/side_project.png`,
+    description:
+      "side project est un projet qui a pour objectif de rendre la mémorisation et le partage de side projet plus simple.Le projet est en cours de développement et est développé avec Svelte et Tauri.",
+    githubLink: "https://github.com/Daniere-Mathieu/side-project",
+    alt: "logo de side project",
   },
 ];

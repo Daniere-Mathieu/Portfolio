@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1"
+    viewBox="0 0 1000 199">
+    <g transform="matrix(1,0,0,1,-0.6060472198691969,-0.22238476718338518)">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 396 79" data-background-color="#ffffff" preserveAspectRatio="xMidYMid meet"
+            height="199" width="1000">
+            <g id="tight-bounds" transform="matrix(1,0,0,1,0.2399961165632476,0.08828340003762492)">
+                <svg viewBox="0 0 395.52 78.82343319992476" height="78.82343319992476"
+                    width="395.52">
+                    <g>
+                        <svg viewBox="0 0 466.8251332489685 93.03387870827277"
+                            height="78.82343319992476" width="395.52">
+                            <g>
+                                <svg viewBox="0 0 48.69853036504078 93.03387870827277"
+                                    height="93.03387870827277" width="48.69853036504078">
+                                    <g>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                            x="0" y="0"
+                                            viewBox="19.682355880737305 3.5 35.572967529296875 67.95874786376953"
+                                            enable-background="new 0 0 75 75" xml:space="preserve"
+                                            height="93.03387870827277" width="48.69853036504078"
+                                            class="icon-icon-0" data-fill-palette-color="accent"
+                                            id="icon-0"><path d="M21.2 59.5c-1.1-2.6-4.2-12.2 3.8-24.7C36 18 31.7 3.5 31.7 3.5S46 8.8 41.7 37.5c-1 6.5-0.9 9 2 9.4 5 0.7 3.1-19.7 3.1-19.7s3.9 2 6.8 12.1c1.5 5.3 1.8 9.5 1.6 12.5-1 18.1-16.5 19.6-16.5 19.6S26.9 73 21.2 59.5z" fill="#7c4e29" data-fill-palette-color="accent"/></svg>
+                                    </g>
+                                </svg>
+                            </g>
+                        </svg>
+                    </g>
+                    <defs />
+                </svg>
+                <rect width="50" height="78.82343319992476" fill="none" stroke="none"
+                    visibility="hidden" />
+            </g>
+        </svg>
+    </g>
+</svg>
