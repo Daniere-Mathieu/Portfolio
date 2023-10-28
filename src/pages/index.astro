@@ -73,7 +73,7 @@ import { Image } from "@astrojs/image/components";
             {
               tech.map((item) => (
                 <li class="main__experience">
-                  <div>
+                  <div class="main__experienceImageContainer">
                     <img
                       class="main__experienceImage"
                       src={item.path}
@@ -83,7 +83,7 @@ import { Image } from "@astrojs/image/components";
                     />
                   </div>
                   <div>
-                    <h4>{item.name}</h4>
+                    <h3>{item.name}</h3>
                   </div>
                 </li>
               ))

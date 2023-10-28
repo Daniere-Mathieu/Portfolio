@@ -55,7 +55,6 @@
     margin-top: 50px;
   }
   &__experienceWrapper {
-    overflow: hidden;
     display: grid;
     width: 100%;
     grid-gap: 20px;
@@ -71,15 +70,21 @@
     gap: 10px;
     z-index: 1;
     display: none;
+    max-height: 25px;
+    height: 25px;
     &:hover,
     &:focus {
-      transform: rotate(3deg);
+      transform: scale(1.1);
     }
 
     &Image {
       width: 25px;
       height: 25px;
       border-radius: 5px;
+      &Container {
+        display: flex;
+        align-items: center;
+      }
     }
     &Separator {
       height: 100%;
@@ -153,18 +158,18 @@
 }
 
 .animate {
-  animation: translate 2s ease-in-out;
+  animation: Bigger 0.7s ease-in-out;
   display: flex;
 }
 
-@keyframes translate {
+@keyframes Bigger {
   from {
-    transform: translateX(500%);
+    transform: scale(0.75);
     display: none;
   }
 
   to {
-    transform: translateX(0%);
+    transform: scale(1);
     display: flex;
   }
 }
